@@ -1,6 +1,7 @@
 package com.github.javafaker;
 
 import com.github.javafaker.idnumbers.EnIdNumber;
+import com.github.javafaker.idnumbers.PlPesel;
 import com.github.javafaker.idnumbers.SvSEIdNumber;
 
 public class IdNumber {
@@ -37,5 +38,9 @@ public class IdNumber {
     public String invalidSvSeSsn() {
         SvSEIdNumber svSEIdNumber = new SvSEIdNumber();
         return svSEIdNumber.getInvalidSsn(faker);
+    }
+
+    public PlPesel.Builder plPesel() {
+        return new PlPesel.Builder();
     }
 }
